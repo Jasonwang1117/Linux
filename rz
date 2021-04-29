@@ -1,0 +1,24 @@
+linux rz: command not found
+一直在用Xshell，今天想把本地文件传到linux服务器上，于是直接把本地文件拖拽到Xshell窗口上，
+
+结果提示“-bash: rz: command not found”
+
+rz命令没找到？执行sz，同样也没找到。
+
+安装lrzsz：
+
+# yum -y install lrzsz
+
+现在就可以正常使用rz、sz命令上传、下载数据了。
+
+使用方法：
+上传文件
+
+# rz filename
+
+或直接拖曳本地文件到ssh活动窗口。
+
+下载文件
+
+# sz filename
+————————————————
