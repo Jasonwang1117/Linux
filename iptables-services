@@ -1,0 +1,37 @@
+问题：查看防火墙状态出现：
+
+Unit iptables.service could not be found.
+1
+解决方案：
+
+安装iptables-services
+yum install iptables-services
+1
+
+2. 启动iptables
+
+systemctl enable iptables
+systemctl start iptables
+1
+2
+
+现在执行查看防火墙状态，停止，启动就行了
+
+查看防火墙状态：
+
+service iptables status
+1
+关闭防火墙:
+
+service iptables stop
+1
+打开防火墙:
+
+service iptables start 
+1
+firewalld 方式
+启动： systemctl start firewalld
+查看状态： systemctl status firewalld
+禁用，禁止开机启动： systemctl disable firewalld
+停止运行： systemctl stop firewalld
+重启：firewall-cmd --reload
