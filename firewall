@@ -1,0 +1,15 @@
+防火墙配置，以上机器若关闭了防火墙，请忽略以下黄颜色标注内容,红色信息自己替换为每台机器对应的端口
+查看防火墙状态：systemctl status firewalld
+下图表示防火墙已开启：
+ 
+下图表示防火墙已关闭：
+ 
+防火墙中放开对应的端口
+xx.xxx.xxx1服务器执行：
+firewall-cmd --permanent --add-port=6379/tcp
+firewall-cmd --permanent --add-port=51511/tcp
+firewall-cmd --permanent --add-port=8161/tcp
+重启防火墙：
+systemctl restart firewalld
+重启防火墙：
+systemctl restart firewalld
